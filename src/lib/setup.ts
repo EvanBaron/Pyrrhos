@@ -1,6 +1,6 @@
-import { ApplicationCommandRegistries, RegisterBehavior } from '@sapphire/framework';
-import { config } from 'dotenv';
+import { ApplicationCommandRegistries, RegisterBehavior } from "@sapphire/framework";
+import { config } from "dotenv";
 
 ApplicationCommandRegistries.setDefaultBehaviorWhenNotIdentical(RegisterBehavior.BulkOverwrite);
 
-config({ path: '.env' });
+config(process.env.NODE_ENV == "dev" ? { path: ".env.development" } : { path: ".env" });

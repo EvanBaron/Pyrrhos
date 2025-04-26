@@ -1,31 +1,30 @@
 {
-	"name": "pyrrhosblue",
-	"version": "1.0.0",
-	"description": "",
-	"main": "dist/index.ts",
-	"author": "Dragonwaap",
-	"license": "ISC",
-	"scripts": {
-		"build": "tsc",
-		"start": "node dist/index.js",
-		"dev": "ts-node src/index.ts",
-		"remove": "cross-env IS_SCRIPT=true ts-node scripts/remove"
-	},
-	"dependencies": {
-		"@discord-player/extractor": "^4.5.1",
-		"@discordjs/voice": "^0.16.1",
-		"@sapphire/framework": "^4.8.5",
-		"discord-player": "^6.7.1",
-		"discord.js": "^14.16.3",
-		"dotenv": "^16.4.5",
-		"mediaplex": "^0.0.9",
-		"youtube-ext": "^1.1.25"
-	},
-	"devDependencies": {
-		"@sapphire/ts-config": "^4.0.1",
-		"@types/node": "^20.17.6",
-		"cross-env": "^7.0.3",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.6.3"
-	}
+  "name": "pyrrhos",
+  "version": "1.1.0",
+  "description": "",
+  "main": "dist/index.ts",
+  "author": "EBaron",
+  "license": "ISC",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir=dist --production --target=bun",
+    "start": "bun dist/index.js",
+    "dev": "bun src/index.ts",
+    "remove": "cross-env IS_SCRIPT=true ts-node scripts/remove"
+  },
+  "dependencies": {
+    "@discord-player/extractor": "^7.1.0",
+    "@discordjs/voice": "^0.18.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@sapphire/framework": "^5.3.4",
+    "discord-player": "^7.1.0",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.5.0",
+    "youtube-ext": "^1.1.25"
+  },
+  "devDependencies": {
+    "@sapphire/ts-config": "^5.0.1",
+    "@types/node": "^20.17.31",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
 }
